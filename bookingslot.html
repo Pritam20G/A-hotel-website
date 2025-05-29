@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/jpeg" href="https://static.vecteezy.com/system/resources/previews/027/543/231/original/hotel-logo-silhouette-hotel-icon-vector.jpg">
+	<title>Book your hotel❤🙌</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-image: url(https://static.vecteezy.com/system/resources/previews/024/578/060/large_2x/dark-elegance-in-an-old-fashioned-luxury-hotel-room-with-antique-decor-generated-by-ai-free-photo.jpg);
+			background-size: cover;
+		}
+		form{
+			height: 70px;
+			width: 300px;
+			background: transparent;
+			padding: 10px;
+			border-radius: 20px;
+			align-items: center;
+			color: white;
+			backdrop-filter: blur(5px);
+/*			box-shadow: 0 0 40px grey;*/
+			overflow: hidden;
+			transition: 1.2s ease;
+			border: 1px solid white;
+		}
+		form:hover{
+			height: 38%;
+			box-shadow: 0 0 50px grey;
+		}
+		form:action{
+			height: 38%;
+			box-shadow: 0 0 50px grey;
+		}
+		input{
+			width: 80%;
+			border-radius: 20px;
+			height: 20px;
+			padding: 5px;
+			transition: 0.6s ease;
+			border: none;
+		}
+		input:focus{
+			transform: scale(1.2);
+			font-weight: bolder;
+			outline: none;
+		}
+		select{
+			width: 80%;
+			border-radius: 20px;
+			height: 30px;
+			padding: 5px;
+			transition: 0.6s ease;
+		}
+		select:focus{
+			transform: scale(1.2);
+			font-weight: bolder;
+		}
+		#datefrom, #dateto{
+			width: 20%;
+			height: 15px;
+			padding: 3px;
+		}
+		#room, #adult, #child{
+			width: 16.6%;
+			height: 15px;
+			padding: 3px;
+		}
+		button{
+			height: 30px;
+			width: 66%;
+			background: #f7f7f7;
+			border-radius: 5px;
+			border: none;
+			transition: 0.5s ease;
+			box-shadow: -5px -5px -12px grey inset;
+		}
+		button:hover{
+			box-shadow: 0 0 50px paleturquoise;
+			background: paleturquoise;
+			border: none;
+			transform: scale(1.1);
+		}
+		button:focus{
+			outline: none;
+			box-shadow: 0 0 50px paleturquoise;
+			background: paleturquoise;
+			border: none;
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+<body>
+	<form onsubmit="fun()" action="paymentslot.html">
+		<center>
+		<h1>Register Now</h1>
+		<input type="text" placeholder="Enter your name" id="name" required><br><br>
+		<select id="place" required>
+			<option disabled selected>Select your Place</option>
+			<option>Delhi</option>
+			<option>Kolkata</option>
+			<option>Mumbai</option>
+		</select><br><br>
+		</center>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="datefromT"> From </span><input type="date" id="datefrom" required>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span id="datefromT"> To </span><input type="date" id="dateto" required> <br><br>
+		<center>
+		<input type="number" placeholder="Room" id="room" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="number" placeholder="Adult" id="adult" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="number" placeholder="Child" id="child"><br><br><br>
+		<a href="paymentslot.html"><button >Book Now</button></a>
+		</center>
+	</form>
+	<script type="text/javascript">
+		function fun() {
+			b = document.getElementById('place').value;
+			alert("Thanks for Booking in " + b); 
+			}
+	</script>
+</body>
+</html>
